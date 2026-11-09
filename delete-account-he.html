@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מחיקת חשבון — שיננא</title>
+  <meta name="description" content="בקשה למחיקת חשבון שיננא וכל הנתונים המשויכים אליו." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Hofshi:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .delete-wrap { max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.8; color: #1c1917; font-family: Heebo, sans-serif; }
+    .delete-wrap h1 { font-family: 'Frank Ruhl Hofshi', serif; font-size: 2rem; color: #111827; margin-bottom: 0.5rem; }
+    .delete-wrap h2 { font-size: 1.25rem; color: #111827; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .delete-wrap p { margin-bottom: 1rem; }
+    .delete-wrap ul { margin-bottom: 1rem; padding-inline-start: 1.2rem; }
+    .delete-wrap li { margin-bottom: 0.35rem; }
+    .delete-wrap .back { display: inline-block; margin-top: 2rem; color: #4b5563; text-decoration: none; }
+    .delete-wrap .back:hover { color: #111827; }
+    .delete-wrap .updated { font-size: 0.875rem; color: #6b7280; margin-bottom: 1.5rem; }
+    .delete-wrap .mail-link {
+      display: inline-block; background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff; font-weight: 800; text-decoration: none;
+      border-radius: 14px; padding: 12px 22px; margin: 0.5rem 0 1rem;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .delete-wrap .mail-link:hover { transform: scale(1.03); filter: brightness(1.1); }
+    .delete-wrap .note { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 12px; padding: 14px 18px; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html" data-i18n="brand">🦁 שיננא</a>
+      <nav class="topnav">
+        <a href="delete-account.html">Delete Account</a>
+        <a href="index.html#contact">צור קשר</a>
+        <a href="privacy-he.html">פרטיות</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="delete-wrap" id="top">
+    <h1>מחיקת חשבון</h1>
+    <p class="updated">עודכן לאחרונה: נובמבר 2026</p>
+
+    <p>אתם יכולים לבקש מחיקה סופית של חשבון שיננא וכל הנתונים המשויכים אליו בכל עת.</p>
+
+    <h2>כיצד לבקש מחיקה</h2>
+    <p>שלחו אימייל אל <strong>privacy@shinena.app</strong> עם הנושא <strong>"Delete my account"</strong> וכתובת האימייל המשויכת לחשבון שלכם.</p>
+
+    <a class="mail-link" href="mailto:privacy@shinena.app?subject=Delete%20my%20account">✉️ שליחת אימייל ל-privacy@shinena.app</a>
+
+    <div class="note">
+      <strong>מה קורה אחרי מכן:</strong>
+      <ul>
+        <li>אנחנו מאמתים את הבקשה מול כתובת האימייל בחשבון שלכם.</li>
+        <li>החשבון, ההתקדמות, ה-XP, הרצפים, ההישגים וכל הנתונים האישיים נמחקים לצמיתות מהשרתים שלנו.</li>
+        <li>תקבלו אימייל אישור לאחר שהמחיקה תושלם.</li>
+        <li>המחיקה היא סופית ואי-אפשר לבטל אותה.</li>
+      </ul>
+    </div>
+
+    <h2>אילו נתונים נמחקים</h2>
+    <ul>
+      <li>פרטי חשבון (שם, אימייל, גיבוב סיסמה)</li>
+      <li>התקדמות לימוד, XP, רמות ורצפים</li>
+      <li>יומני דקלום ומדדי דיוק</li>
+      <li>הישגים ותגים</li>
+      <li>כניסות בטבלאות מובילים</li>
+      <li>דיווחי בעיה שהגשתם</li>
+    </ul>
+
+    <p>לפרטים מלאים, ראו את <a href="privacy-he.html">מדיניות הפרטיות</a> שלנו.</p>
+
+    <a class="back" href="index.html">← חזרה לדף הבית</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span data-i18n="rights">© שיננא — לימוד תורה בשמחה</span>
+      <nav>
+        <a href="index.html#donate" data-i18n="navDonate2">תרומה</a>
+        <a href="index.html#contact" data-i18n="navContact2">צור קשר</a>
+        <a href="privacy-he.html">פרטיות</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete My Account — Shinena</title>
+  <meta name="description" content="Request deletion of your Shinena account and all associated data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Hofshi:wght@500;700;900&family=Heebo:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .delete-wrap { max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #1f2937; font-family: Heebo, sans-serif; }
+    .delete-wrap h1 { font-family: 'Frank Ruhl Hofshi', serif; font-size: 2rem; color: #111827; margin-bottom: 0.5rem; }
+    .delete-wrap h2 { font-size: 1.25rem; color: #111827; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .delete-wrap p { margin-bottom: 1rem; }
+    .delete-wrap ul { margin-bottom: 1rem; padding-left: 1.2rem; }
+    .delete-wrap li { margin-bottom: 0.35rem; }
+    .delete-wrap .back { display: inline-block; margin-top: 2rem; color: #4b5563; text-decoration: none; }
+    .delete-wrap .back:hover { color: #111827; }
+    .delete-wrap .updated { font-size: 0.875rem; color: #6b7280; margin-bottom: 1.5rem; }
+    .delete-wrap .mail-link {
+      display: inline-block; background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff; font-weight: 800; text-decoration: none;
+      border-radius: 14px; padding: 12px 22px; margin: 0.5rem 0 1rem;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .delete-wrap .mail-link:hover { transform: scale(1.03); filter: brightness(1.1); }
+    .delete-wrap .note { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 12px; padding: 14px 18px; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html" data-i18n="brand">🦁 Shinena</a>
+      <nav class="topnav">
+        <a href="delete-account-he.html">מחיקת חשבון</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="delete-wrap" id="top">
+    <h1>Delete My Account</h1>
+    <p class="updated">Last updated: November 2026</p>
+
+    <p>You can request permanent deletion of your Shinena account and all associated data at any time.</p>
+
+    <h2>How to request deletion</h2>
+    <p>Email <strong>privacy@shinena.app</strong> with the subject <strong>"Delete my account"</strong> and the email address associated with your account.</p>
+
+    <a class="mail-link" href="mailto:privacy@shinena.app?subject=Delete%20my%20account">✉️ Email privacy@shinena.app</a>
+
+    <div class="note">
+      <strong>What happens next:</strong>
+      <ul>
+        <li>We verify the request against the email address on your account.</li>
+        <li>Your account, progress, XP, streaks, achievements, and all personal data are permanently removed from our servers.</li>
+        <li>You'll receive a confirmation email once the deletion is complete.</li>
+        <li>Deletion is permanent and cannot be undone.</li>
+      </ul>
+    </div>
+
+    <h2>What data is deleted</h2>
+    <ul>
+      <li>Account information (name, email, password hash)</li>
+      <li>Study progress, XP, levels, and streaks</li>
+      <li>Recitation logs and accuracy metrics</li>
+      <li>Achievements and badges</li>
+      <li>Leaderboard entries</li>
+      <li>Any issue reports you submitted</li>
+    </ul>
+
+    <p>For full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <a class="back" href="index.html">← Back to homepage</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span data-i18n="rights">© Shinena — joyful Torah learning</span>
+      <nav>
+        <a href="index.html#donate" data-i18n="navDonate2">Donate</a>
+        <a href="index.html#contact" data-i18n="navContact2">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

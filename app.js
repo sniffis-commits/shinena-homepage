@@ -96,7 +96,8 @@
       donateBtn: "Secure donation 💛", contactTitle: "Contact",
       cName: "Name", cEmail: "Email", cMsg: "Message", cSend: "Send ✉️",
       rights: "© Shinena — joyful Torah learning", openApp: "Open the app",
-      navDonate2: "Donate", navContact2: "Contact", navPrivacy2: "Privacy"
+      navDonate2: "Donate", navContact2: "Contact", navPrivacy2: "Privacy",
+      navDeleteAccount: "Delete Account"
     }
   };
   var btn = document.getElementById("langToggle");
@@ -115,6 +116,8 @@
       if (priv && priv.getAttribute("data-i18n-href")) priv.href = priv.getAttribute("data-i18n-href");
       var priv2 = document.querySelector('[data-i18n="navPrivacy2"]');
       if (priv2 && priv2.getAttribute("data-i18n-href")) priv2.href = priv2.getAttribute("data-i18n-href");
+      var del = document.querySelector('[data-i18n="navDeleteAccount"]');
+      if (del && del.getAttribute("data-i18n-href")) del.href = del.getAttribute("data-i18n-href");
     } else {
       location.reload();
     }
