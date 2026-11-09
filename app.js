@@ -74,7 +74,7 @@
   var STR = {
     en: {
       brand: "🦁 Shinena", navFeatures: "Features", navHow: "How it works", navGet: "Get the app",
-      navDonate: "Donate", navContact: "Contact", playNow: "Play now ▶",
+      navDonate: "Donate", navContact: "Contact", navPrivacy: "Privacy", playNow: "Play now ▶",
       kicker: "Gamified Torah memorization", heroTitle: "Shinena — memorize like a game",
       heroSub: "Mishna, Tanakh, Gemara, Rambam and Shulchan Arukh — recite to the mic, get instant scores, earn XP and streaks, and review right on time with SM-2.",
       playNow2: "Start memorizing — free ▶", getApp: "Get for Android / iPhone",
@@ -96,7 +96,7 @@
       donateBtn: "Secure donation 💛", contactTitle: "Contact",
       cName: "Name", cEmail: "Email", cMsg: "Message", cSend: "Send ✉️",
       rights: "© Shinena — joyful Torah learning", openApp: "Open the app",
-      navDonate2: "Donate", navContact2: "Contact"
+      navDonate2: "Donate", navContact2: "Contact", navPrivacy2: "Privacy"
     }
   };
   var btn = document.getElementById("langToggle");
@@ -110,6 +110,11 @@
         var k = el.getAttribute("data-i18n");
         if (STR.en[k]) el.textContent = STR.en[k];
       });
+      // Swap privacy link target for English store listing
+      var priv = document.querySelector('[data-i18n="navPrivacy"]');
+      if (priv && priv.getAttribute("data-i18n-href")) priv.href = priv.getAttribute("data-i18n-href");
+      var priv2 = document.querySelector('[data-i18n="navPrivacy2"]');
+      if (priv2 && priv2.getAttribute("data-i18n-href")) priv2.href = priv2.getAttribute("data-i18n-href");
     } else {
       location.reload();
     }
