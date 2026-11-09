@@ -13,19 +13,36 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+/* Task 1: Global font smoothing for crisp rendering on Windows (ClearType) */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   margin: 0;
-  font-family: "Heebo", "Rubik", system-ui, -apple-system, sans-serif;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
 }
+
+/* Task 1: Hebrew serif headings & Torah text — Frank Ruhl Hofshi */
 h1, h2, h3, .brand {
-  font-family: "Frank Ruhl Libre", "Heebo", "David Libre", serif;
+  font-family: "Frank Ruhl Hofshi", "David Libre", serif;
   letter-spacing: 0;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
-html[dir="ltr"] body { font-family: system-ui, sans-serif; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+html[dir="ltr"] body { font-family: "Heebo", system-ui, sans-serif; }
+
+/* Task 2: Desktop readability — centered container, max-width 1200px */
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 .wrap.narrow { max-width: 640px; }
 
 .site-header {
@@ -45,12 +62,22 @@ html[dir="ltr"] body { font-family: system-ui, sans-serif; }
   display: inline-block; text-decoration: none; font-weight: 800;
   border-radius: 14px; padding: 10px 18px; border: 2px solid transparent;
   cursor: pointer; font-size: 0.95rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
-.btn-primary { background: var(--accent); color: var(--accent-ink); }
-.btn-primary:hover { filter: brightness(0.93); }
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
 .btn-ghost { background: #fff; border-color: var(--line); color: var(--ink); }
 .btn-big { font-size: 1.05rem; padding: 14px 24px; }
-.btn[aria-disabled="true"] { opacity: 0.65; }
+.btn[aria-disabled="true"] { opacity: 0.65; cursor: not-allowed; }
 
 .hero {
   background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
@@ -74,19 +101,53 @@ html[dir="ltr"] body { font-family: system-ui, sans-serif; }
 .phone-screen {
   background: #fffdf7; border-radius: 26px; padding: 18px 14px; color: #1c1917;
   display: grid; gap: 10px; text-align: center;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6);
 }
 .mock-title { font-weight: 900; }
 .mock-stars { color: #d97706; font-size: 1.4rem; letter-spacing: 2px; }
 .mock-row { background: #fef3c7; border-radius: 12px; padding: 8px; font-weight: 800; }
-.mock-xp { background: #dcfce7; }
+.mock-xp {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 12px; padding: 8px; font-weight: 800;
+  border: 1px solid #f59e0b;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+.mock-xp .xp-pulse {
+  display: inline-block;
+  animation: xpPulse 2.5s ease-in-out infinite;
+}
+@keyframes xpPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.06); opacity: 0.92; }
+}
 .mock-btn { background: var(--accent); color: #fff; border-radius: 12px; padding: 10px; font-weight: 900; }
 
 .section { padding: 56px 0; }
 .section.alt { background: #fff; border-block: 1px solid var(--line); }
 .section h2 { font-size: 1.7rem; margin: 0 0 8px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 20px; }
-.card { background: var(--card); border: 2px solid var(--line); border-radius: var(--radius); padding: 20px; }
-.card-emoji { font-size: 2rem; }
+.card {
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+  padding: 20px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+.card-usp {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, #fff, #f0fdf4);
+}
+.card-emoji {
+  font-size: 2rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 14px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 1px solid #f59e0b;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+  margin-bottom: 10px;
+}
 .card h3 { margin: 8px 0 4px; font-size: 1.1rem; }
 .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
 
